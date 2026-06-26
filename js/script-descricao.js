@@ -35,8 +35,7 @@ const listDescricao = () => {
     divLote.innerHTML = ''
 
     descricao.forEach((elem,i) => {
-        divLote.innerHTML += `<div> ${i + 1} - ${elem.produto} | ${parseFloat(elem.valor).toFixed(2).replace('.', ',')} | ${elem.quantidade}  </div>`
-
+        divLote.innerHTML += `<div> ${i + 1} - ${elem.produto} | ${parseFloat(elem.valor).toFixed(2).replace('.', ',')} | ${elem.quantidade} |  </div>`
 
     })
 
