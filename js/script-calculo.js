@@ -10,9 +10,10 @@ const valorAdicional = (objDescricao) => {
     }else if(objDescricao.valor >= 12000 && objDescricao.valor < 20000){
         leia = `${parseFloat(objDescricao.valor * 0.15).toFixed(2)}`
     }else{
-        leia = `${parseFloat(objPessoa.renda * 0.20).toFixed}`
+        leia = `${parseFloat(objDescricao.valor * 0.20).toFixed}`
     }
 
     return leia
 }
 
+export {valorAdicional}

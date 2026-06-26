@@ -1,7 +1,9 @@
+import { valorAdicional } from "./script-calculo.js"
+
 const descricao = []
 
-const formDescricao = document.querySelector('form-descricao')
-const divLote = document.querySelector('info-lote')
+const formDescricao = document.querySelector('#form-descricao')
+const divLote = document.querySelector('#info-lote')
 
 formDescricao.addEventListener('submit', (evt) => {
 
@@ -35,7 +37,7 @@ const listDescricao = () => {
     divLote.innerHTML = ''
 
     descricao.forEach((elem,i) => {
-        divLote.innerHTML += `<div> ${i + 1} - ${elem.produto} | ${parseFloat(elem.valor).toFixed(2).replace('.', ',')} | ${elem.quantidade} |  </div>`
+        divLote.innerHTML += `<div> ${i + 1} - Produto: ${elem.produto} | valor unitário: ${parseFloat(elem.valor).toFixed(2).replace('.', ',')} | Quantidade: ${elem.quantidade} | Valor adicional: ${valorAdicional(elem)} </div>`
 
     })
 
