@@ -1,4 +1,4 @@
-import { valorAdicional } from "./script-calculo.js"
+import {valorTotal} from "./script-calculo.js"
 
 const descricao = []
 
@@ -37,7 +37,7 @@ const listDescricao = () => {
     divLote.innerHTML = ''
 
     descricao.forEach((elem,i) => {
-        divLote.innerHTML += `<div> ${i + 1} - Produto: ${elem.produto} | valor unitário: ${parseFloat(elem.valor).toFixed(2).replace('.', ',')} | Quantidade: ${elem.quantidade} | Valor adicional: ${valorAdicional(elem)} </div>`
+        divLote.innerHTML += `<div class= 'item-descricao'> ${i + 1} - Produto: ${elem.produto} | valor unitário: ${parseFloat(elem.valor).toFixed(2).replace('.', ',')} | Quantidade: ${elem.quantidade} | Valor total: ${valorTotal(elem)} </div>`
 
     })
 
